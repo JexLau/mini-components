@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>
+  <mp-house-filter bind:close="close" bind:change="searchHouseList"></mp-house-filter>
+</view>

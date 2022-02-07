@@ -1,0 +1,146 @@
+/* 组件: 房源筛选 */
+.content {
+  height: 83rpx;
+}
+
+/* 筛选选项 */
+.tab {
+  position: relative; z-index: 9;
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 83rpx;
+  background: #fff; border-bottom: 1px solid #f0f0f0;
+}
+.tab-item {
+  display: flex; justify-content: center; align-items: center;
+  width: 100%; height: 100%;
+  font-size: 29rpx;
+}
+.tab-item_active {
+  color: #c9342e;
+}
+.tab-item_active .tab-item-border {
+  display: block;
+}
+.tab-icon {
+  width: 15rpx; height: 7rpx;
+  margin-left: 7rpx;
+}
+.tab-item-txt {
+  max-width: 100rpx;
+  text-overflow: ellipsis; white-space: nowrap; overflow: hidden; line-height: 29rpx;
+}
+/* 筛选选项end */
+
+.wrap {
+  position: absolute; top: 0; left: 0; z-index: 8;
+  padding-top: 136rpx;
+  width: 100%; max-height: 100%; min-height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.operate {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 110rpx;
+  padding: 0 40rpx;
+  background: #fff; border-top: 1px solid #f0f0f0;
+}
+.operate-btn {
+  display: flex; justify-content: center; align-items: center;
+  width: 320rpx; height: 70rpx;
+  border-radius: 6rpx;
+  font-size: 30rpx;
+}
+.operate-confirm {
+  background: #c9342e;
+  color: #fff;
+}
+.operate-reset {
+  border: 1px solid #f0f0f0;
+  color: #666;
+}
+
+/* 区域 */
+.area-pricker {
+  display: flex;
+  height: 480rpx;
+  background: #fff;
+}
+.area-pricker-box {
+  flex-shrink: 0;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+  width: 190rpx; color: #333;
+}
+.area-pricker-box + .area-pricker-box {
+  border-left: 1px solid #e9e9e9;
+}
+.area-pricker-box >view {
+  flex-shrink: 0;
+  display: flex; align-items: center;
+  padding-left: 30rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+.area-pricker-active {
+  background: #fafafa;
+}
+.area-pricker-right {
+  flex-shrink: 1;
+  width: 100%;
+}
+/* 区域end */
+
+/* 价格 */
+.price {
+  background: #fff;
+  padding: 0 30rpx;
+  max-height: 650rpx;overflow: hidden; overflow-y: auto;
+}
+.price-label {
+  padding-bottom: 30rpx;
+}
+.price-txt {
+  padding: 12rpx 0 20rpx 0;
+  font-size: 26rpx; color: #333; font-weight: bold;
+}
+.price-label-wrap {
+  display: flex; align-items: center;
+  font-size: 22rpx; color: #ccc;
+}
+.price-input {
+  border-radius: 6rpx; border: 1px solid #ccc;
+  width: 327rpx; height: 63rpx;
+  text-align: center; color: #333;
+}
+.label-gap {
+  padding: 0 20rpx;
+  font-size: 28rpx; color: #333;
+}
+/* 价格end */
+
+/* 面积选择 */
+.area-list {
+  display: flex; flex-wrap: wrap;
+  padding: 30rpx 30rpx 30rpx 30rpx; margin-left: -35rpx;
+  background: #fff;
+}
+/* 面积选择 end */
+
+/* 公共样式 */
+.public-unit {
+  padding-top: 30rpx; padding-bottom: 20rpx;
+  font-size: 26rpx; color: #333; font-weight: bold;
+}
+.public-list {
+  display: flex; flex-wrap: wrap;
+  margin-left: -35rpx;
+}
+.public-item {
+  display: flex; justify-content: center; align-items: center;
+  margin-left: 32rpx; margin-bottom: 24rpx;
+  width: 208rpx; height: 63rpx;
+  border-radius: 6rpx; background: #f6f6f5;
+  font-size: 26rpx; color: #333;
+}
+/* 公共样式end */
