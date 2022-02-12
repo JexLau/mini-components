@@ -1,0 +1,11 @@
+<!-- 组件: 时间控件: 上层包装 -->
+<view bind:tap="hideOrShow" class="main"></view>
+<view bind:tap="hideOrShow" style="display: {{ isShow ? 'none' : 'block' }}" class="container">
+  <view catch:tap="() => return" class="date-wrap">
+    <cover-view class="header">
+      <cover-view bind:tap="hideOrShow" class="cancel-btn">取消</cover-view>
+      <cover-view bind:tap="confirm" class="confirm-btn">完成</cover-view>
+    </cover-view>
+    <wx-time-control startDate="{{startDate}}" endDate="{{endDate}}" value="{{value}}" id="mpTimeControl" class="mp-time-control"></wx-time-control>
+  </view>
+</view>

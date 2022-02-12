@@ -2,24 +2,36 @@
 <view>
   <view style="margin-bottom: 60rpx">
     <view>条件filter组件样例</view>
-    <ex-filter filterOptions="{{ filterOptions }}" bind:handleClick="handleClick">
+    <wx-filter filterOptions="{{ filterOptions }}" bind:handleClick="handleFilterItemClick">
       <view wx:if="{{curActive === 'area'}}">area1</view>
       <view wx:if="{{curActive === 'price'}}">price1</view>
       <view wx:if="{{curActive === 'houseType'}}">houseType1</view>
       <view wx:if="{{curActive === 'size'}}">size1</view>
       <view wx:if="{{curActive === 'more'}}">more1</view>
-    </ex-filter>
+    </wx-filter>
   </view>
+
   <view style="margin-bottom: 60rpx">
     <view>地址选择组件样例</view>
     <view class="select-box">
       <view class="select-label">地址</view>
-      <ex-area-picker bind:change="areaPickerChange" class="select-input"></ex-area-picker>
+      <wx-area-picker bind:change="areaPickerChange" class="select-input"></wx-area-picker>
       <image class="right-icon" src="/assets/btn_icon_open.png"></image>
     </view>
   </view>
+
   <view style="margin-bottom: 60rpx">
     <view>展开/收起样例</view>
-    <ex-flod content="富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。"></ex-flod>
+    <wx-flod content="富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。"></wx-flod>
+  </view>
+  
+  <view style="margin-bottom: 60rpx">
+    <view>时间选择组件样例</view>
+    <view class="select-box">
+      <view class="select-label">地址</view>
+      <!-- <wx-area-picker bind:change="areaPickerChange" class="select-input"></wx-area-picker> -->
+      <wx-picker-date wx:if="{{ startDate !== -1 }}" bind:change="changeDate" bind:status="pickerDateStatusChange" startDate="{{startDate}}"></wx-picker-date>
+      <image class="right-icon" src="/assets/btn_icon_open.png"></image>
+    </view>
   </view>
 </view>

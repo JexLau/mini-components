@@ -1,9 +1,13 @@
 // index.ts
-// 获取应用实例
-const app = getApp<IAppOption>()
+
+import { AreaPickerParams } from "../../components/area-picker/index.d";
+import { StatusParams } from "../../components/date-picker/index.d";
+import { DateTimeValue } from "../../components/date-picker/time-control.d";
 
 Page({
   data: {
+    /** 开始时间 */
+    startDate: -1,
     curActive: "",
     filterOptions: [
       { text: "区域", isActive: false, key: "area" },
@@ -14,15 +18,27 @@ Page({
     ],
   },
   
-  handleClick(ev: Mini.Wx.CustomEventDom<string>) {
+  /** 监听Filter-item点击事件 */
+  handleFilterItemClick(ev: Mini.Wx.CustomEventDom<string>) {
     console.log("点击的key: ", ev.detail)
     this.setData({
       curActive: ev.detail
     })
   },
   
-  /** 响应省市区发生变化 */
-  areaPickerChange(ev: Mini.Wx.CustomEventDom<WechatCustomComponent.AreaPickerParams> ) {
+  /** 监听省市区发生变化 */
+  areaPickerChange(ev: Mini.Wx.CustomEventDom<AreaPickerParams> ) {
     console.log("点击省市区: ", ev.detail)
+  },
+
+  
+  /** 监听时间发生变化 */
+  changeDate(ev: Mini.Wx.CustomEventDom<DateTimeValue>) {
+    console.log("时间:", ev.detail.rawDateTime);
+  },
+
+  /** 时间选择器状态变化 */
+  pickerDateStatusChange(ev: Mini.Wx.CustomEventDom<StatusParams>) {
+    console.log("是否关闭时间选择器:", ev.detail.isShow);
   },
 })

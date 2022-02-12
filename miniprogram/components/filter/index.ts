@@ -1,9 +1,11 @@
 /** 条件filter组件 */
+import { FilterOptionType } from "./index.d";
+
 Component({
   properties: {
     filterOptions: {
       type: Array,
-      default: [] as Array<WechatCustomComponent.FilterOptionType>
+      default: [] as Array<FilterOptionType>
     },
   },
   data: {
@@ -12,7 +14,7 @@ Component({
     /** 是否显示筛选栏 */
     isShowFilters: false,
     /** 筛选列表 */
-    options: [] as Array<WechatCustomComponent.FilterOptionType>
+    options: [] as Array<FilterOptionType>
   },
   lifetimes: {
     attached() {

@@ -1,7 +1,8 @@
 {
   "usingComponents": {
-    "ex-filter": "/components/filter/index",
-    "ex-flod": "/components/flod/index",
-    "ex-area-picker": "/components/area-picker/index"
+    "wx-filter": "/components/filter/index",
+    "wx-flod": "/components/flod/index",
+    "wx-area-picker": "/components/area-picker/index",
+    "wx-date-picker": "/components/date-picker/index"
   }
 }

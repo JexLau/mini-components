@@ -1,0 +1,18 @@
+<!-- 组件: 时间核心控件 -->
+<picker-view bindchange="handlePickerChange" value="{{ values }}" class="picker-wrap">
+  <picker-view-column class="column">
+    <view wx:for="{{yearLists}}" wx:key="key" class="column-item">{{ item.value }}</view>
+  </picker-view-column>
+  <picker-view-column class="column">
+    <view wx:for="{{monthLists}}" wx:key="key" class="column-item">{{ item.value }}</view>
+  </picker-view-column>
+  <picker-view-column class="column">
+    <view wx:for="{{dayLists}}" wx:key="key" class="column-item">{{ item.value }}</view>
+  </picker-view-column>
+  <picker-view-column class="column">
+    <view wx:for="{{hourLists}}" wx:key="key" class="column-item">{{ item.value }}</view>
+  </picker-view-column>
+  <picker-view-column class="column">
+    <view wx:for="{{minuteLists}}" wx:key="key" class="column-item">{{ item.value }}</view>
+  </picker-view-column>
+</picker-view>

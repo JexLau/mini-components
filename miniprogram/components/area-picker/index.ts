@@ -1,5 +1,6 @@
 /** 省市区三级联动组件 */
 import { cityData } from "./city-data";
+import { Division, AreaPickerParams } from "./index.d"
 
 Component({
   properties: {
@@ -24,9 +25,9 @@ Component({
   },
   data: {
     /** 城市列表 */
-    _rawDivisionLists: [] as WechatCustomComponent.Division[],
+    _rawDivisionLists: [] as Division[],
     /** 当前的下拉条 */
-    currentDivisionLists: [] as WechatCustomComponent.Division[][],
+    currentDivisionLists: [] as Division[][],
     // 省市区的 name
     siteName: {
       province: "", // 省
@@ -109,7 +110,7 @@ Component({
         siteIndex: indexs
       })
 
-      const params: WechatCustomComponent.AreaPickerParams = {
+      const params: AreaPickerParams = {
         province: { label: one.text, value: one.code },
         city: { label: two.text, value: two.code },
         town: { label: three.text, value: three.code }

@@ -1,0 +1,13 @@
+/*  组件: 时间核心控件 */
+.picker-wrap {
+  height: 100%;
+}
+
+.column-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 89rpx;
+  font-size: 30rpx;
+  color: #333;
+}
