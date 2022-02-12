@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "mp-house-filter": "/components/filter/filter"
+    "ex-filter": "/components/filter/index",
+    "ex-area-picker": "/components/area-picker/index"
   }
 }

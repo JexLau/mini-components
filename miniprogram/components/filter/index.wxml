@@ -1,0 +1,15 @@
+<!-- 筛选组件 -->
+<view class="container">
+  <view class="tab">
+    <view wx:for="{{ options }}" wx:key="key" bind:tap="handleClick" data-key="{{ item.key }}" data-index="{{ index }}" class="tab-item {{ item.key === tabActive ? 'tab-item_active theme-color' : '' }}">
+      <view class="tab-item-txt">{{ item.text }}</view>
+      <image wx:if="{{ item.key === tabActive }}" class="tab-icon" src="./assets/btn_icon_drop_down_pre.png"></image>
+      <image wx:else class="tab-icon" src="./assets/drop_down_default.png"></image>
+    </view>
+    <view wx:if="{{ isShowFilters }}" bind:tap="close" class="wrap">
+      <view wx:for="{{options}}" wx:key="key" class="content">
+        <slot></slot>
+      </view>
+    </view>
+  </view>
+</view>
