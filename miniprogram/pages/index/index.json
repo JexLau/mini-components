@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "ex-filter": "/components/filter/index",
+    "ex-flod": "/components/flod/index",
     "ex-area-picker": "/components/area-picker/index"
   }
 }

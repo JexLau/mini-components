@@ -1,0 +1,33 @@
+/* commponent/flod/flod.wxss */
+.wrap {
+  position: relative;
+  width: 100%;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.text-content {
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.more {
+  position: absolute;
+  font-size: 26rpx;
+  bottom: 0;
+  right: 0;
+}
+
+.red-text {
+  color: #C9342E;
+  background: white;
+  padding: 0 0 0 20rpx;
+}
+
+.ellipsis-rows-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

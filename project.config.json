@@ -5,7 +5,7 @@
   },
   "miniprogramRoot": "miniprogram/",
   "compileType": "miniprogram",
-  "projectname": "mini-filter",
+  "projectname": "mini-components",
   "setting": {
     "urlCheck": true,
     "es6": true,

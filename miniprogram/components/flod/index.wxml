@@ -1,0 +1,5 @@
+<!-- 组件: 文本折叠和展开 -->
+<view class="wrap">
+  <rich-text class="text-content {{(isOverflow && !isExpand) ? 'ellipsis-rows-3' : ''}}" nodes="{{content}}"></rich-text>
+  <text wx:if="{{isOverflow || isExpand}}" class="more red-text" bind:tap="collapse">{{isExpand ? '[收起]' : '[展开]'}}</text>
+</view>
