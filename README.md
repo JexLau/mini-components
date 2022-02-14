@@ -14,12 +14,12 @@
 - Divider                分割线
 - Video                  视频组件
 - Input                  输入框
+- Picker                 简单选择器
+- Radio                  单选
 
 ## 待整理
 
-- Picker                 简单选择器
 - Tabs                   标签页
-- Radio                  单选
 - GetPhoneNumber         获取用户手机号
 - GetUserProfile         获取用户信息
 - PreImageLoader         图片预加载

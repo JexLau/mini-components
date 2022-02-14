@@ -1,0 +1,15 @@
+<view>
+  <view class="input-box radios">
+    <view class="input-label">
+      <text class="input-required" wx:if="{{required}}">*</text>
+      <text>{{label}}</text>
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios}}" wx:key="value" style="margin-right:{{item.marginRight}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" />
+        <text class="color-gray">{{item.name}}</text>
+      </label>
+    </radio-group>
+  </view>
+  <wxc-divider marginTop="0" marginBottom="0" wx:if="{{border}}"></wxc-divider>
+</view>

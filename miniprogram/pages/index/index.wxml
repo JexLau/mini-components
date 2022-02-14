@@ -56,4 +56,8 @@
       <image class="right-icon" src="/assets/btn_icon_open.png" slot="right-unit"></image>
     </wxc-select-picker>
   </view>
+  <view style="margin-bottom: 60rpx">
+    <view>单选组件样例</view>
+    <wxc-radio label="计算方式" radios="{{radios}}" defaulActive="{{'room'}}" border bind:change="radioChange"></wxc-radio>
+  </view>
 </view>

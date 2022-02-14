@@ -31,7 +31,20 @@ Page({
       videoCover: "https://apkj-static.apyfc.com/1607510123699346.jpeg"
     },
     inputText: "11",
-    selectList: selectList
+    selectList: selectList,
+    radios: [
+      {
+        value: "room",
+        name: "按房屋总价",
+        checked: true,
+        marginRight: "40rpx"
+      },
+      {
+        value: "money",
+        name: "按贷款总价",
+        checked: true
+      }
+    ],
   },
 
   /** 监听Filter-item点击事件 */
@@ -68,6 +81,11 @@ Page({
 
   /** picker change */
   pickerChange(ev: Mini.Wx.ChangeEventDom) {
+    console.log(ev.detail.value);
+  },
+
+  /** radio change */
+  radioChange(ev: Mini.Wx.ChangeEventDom) {
     console.log(ev.detail.value);
   },
 })

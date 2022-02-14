@@ -1,0 +1,24 @@
+.radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+.color-gray {
+  color: #999;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 86rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.input-label {
+  flex-shrink: 0;
+  width: 220rpx;
+}
