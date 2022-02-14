@@ -44,4 +44,10 @@
       <wxc-video config="{{videoConfig}}"></wxc-video>
     </view>
   </view>
+  <view style="margin-bottom: 60rpx">
+    <view>Input组件样例</view>
+    <wxc-input label="总价" value="{{inputText}}" border placeholder="请输入" textRight bind:input="handleInput">
+        <text slot="right-unit">万</text>
+      </wxc-input>
+  </view>
 </view>

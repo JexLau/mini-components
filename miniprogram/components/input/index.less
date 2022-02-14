@@ -1,0 +1,45 @@
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 86rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.input-label {
+  flex-shrink: 0;
+  width: 220rpx;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-left: 250rpx;
+  padding-right: 80rpx;
+  height: 100%;
+  width: auto;
+  line-height: 86rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.input-right-unit {
+  flex-shrink: 0;
+  color: #999;
+}
+
+.input-required {
+  color: #c9342e;
+  margin-right: 10rpx;
+}
+
+.input-text-right {
+  text-align: right;
+}

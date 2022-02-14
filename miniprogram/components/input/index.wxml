@@ -1,0 +1,14 @@
+<view>
+  <view class="input-box">
+    <view class="input-label">
+      <text class="input-required" wx:if="{{required}}">*</text>
+      <text>{{label}}</text>
+    </view>
+    <input class="input {{textRight ? 'input-text-right' : ''}}" maxlength="{{maxlength}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" disabled="{{disabled}}" password="{{password}}" type="{{type}}" value="{{value}}" focus="{{focus}}" placeholder-class="{{placeholderClass}}" placeholder-style="{{placehoderStyle}}" placeholder="{{placeholder}}" bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur" bindconfirm="handleInputConfirm"></input>
+    <view class="input-right-unit">
+      <slot name="right-unit"></slot>
+    </view>
+    <icon wx:if="{{clearable}}" bindtap="handleClearTap" type="clear" size="18" />
+  </view>
+  <wxc-divider marginTop="0" marginBottom="0" wx:if="{{border}}"></wxc-divider>
+</view>

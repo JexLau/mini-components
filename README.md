@@ -13,10 +13,10 @@
 - Flod              文本的折叠展开
 - Divider                分割线
 - Video                  视频组件
+- Input                  输入框
 
 ## 待整理
 
-- Input                  输入框
 - Picker                 简单选择器
 - Tabs                   标签页
 - Radio                  单选

@@ -21,7 +21,8 @@ Page({
     videoConfig: {
       url: "https://apkj-static.apyfc.com/1610436547232155.mp4",
       videoCover: "https://apkj-static.apyfc.com/1607510123699346.jpeg"
-    }
+    },
+    inputText: "11"
   },
   
   /** 监听Filter-item点击事件 */
@@ -50,4 +51,9 @@ Page({
   pickerDateStatusChange(ev: Mini.Wx.CustomEventDom<StatusParams>) {
     console.log("是否关闭时间选择器:", ev.detail.isShow);
   },
+
+  /** 监听输入框输入 */
+  handleInput(ev: Mini.Wx.InputEventDom) {
+    console.log(ev.detail.value)
+  }
 })
