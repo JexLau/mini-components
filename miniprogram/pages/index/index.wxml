@@ -47,7 +47,13 @@
   <view style="margin-bottom: 60rpx">
     <view>Input组件样例</view>
     <wxc-input label="总价" value="{{inputText}}" border placeholder="请输入" textRight bind:input="handleInput">
-        <text slot="right-unit">万</text>
-      </wxc-input>
+      <text slot="right-unit">万</text>
+    </wxc-input>
+  </view>
+  <view style="margin-bottom: 60rpx">
+    <view>选择器组件样例</view>
+    <wxc-select-picker label="期数" selectList="{{selectList}}" bind:change="pickerChange" border textRight>
+      <image class="right-icon" src="/assets/btn_icon_open.png" slot="right-unit"></image>
+    </wxc-select-picker>
   </view>
 </view>

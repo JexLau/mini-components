@@ -1,0 +1,16 @@
+<!-- 组件: 选择器 -->
+<view class="input-box">
+  <view class="input-label">
+    <text class="input-required" wx:if="{{required}}">*</text>
+    <text>{{label}}</text>
+  </view>
+  <picker class="picker" mode="selector" bindchange="handlePickerChange" bind:tap="handleClick" bindcancel="cancelPicker" value="{{selectIndex}}" range="{{selectList}}" range-key="text">
+    <view class="input {{textRight ? 'select-text-right' : ''}}">
+      <text>{{selectItem.text}}</text>
+    </view>
+  </picker>
+  <view class="input-right-icon">
+    <slot name="right-unit"></slot>
+  </view>
+</view>
+<wxc-divider marginTop="0" marginBottom="0" wx:if="{{border}}"></wxc-divider>

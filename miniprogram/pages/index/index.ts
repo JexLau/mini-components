@@ -5,6 +5,14 @@ import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
 import { formatTime } from "../../utils/util";
 
+const selectList: Array<{ value: number; text: string }> = []
+for (let i = 30; i >= 1; i--) {
+  selectList.push({
+    value: 12 * i,
+    text: `${i}年(${12 * i}期)`
+  })
+}
+
 Page({
   data: {
     /** 开始时间 */
@@ -22,9 +30,10 @@ Page({
       url: "https://apkj-static.apyfc.com/1610436547232155.mp4",
       videoCover: "https://apkj-static.apyfc.com/1607510123699346.jpeg"
     },
-    inputText: "11"
+    inputText: "11",
+    selectList: selectList
   },
-  
+
   /** 监听Filter-item点击事件 */
   handleFilterItemClick(ev: Mini.Wx.CustomEventDom<string>) {
     console.log("点击的key: ", ev.detail)
@@ -32,13 +41,13 @@ Page({
       curActive: ev.detail
     })
   },
-  
+
   /** 监听省市区发生变化 */
-  areaPickerChange(ev: Mini.Wx.CustomEventDom<AreaPickerParams> ) {
+  areaPickerChange(ev: Mini.Wx.CustomEventDom<AreaPickerParams>) {
     console.log("点击省市区: ", ev.detail)
   },
 
-  
+
   /** 监听时间发生变化 */
   changeDate(ev: Mini.Wx.CustomEventDom<DateTimeValue>) {
     console.log("时间:", ev.detail.rawDateTime);
@@ -55,5 +64,10 @@ Page({
   /** 监听输入框输入 */
   handleInput(ev: Mini.Wx.InputEventDom) {
     console.log(ev.detail.value)
-  }
+  },
+
+  /** picker change */
+  pickerChange(ev: Mini.Wx.ChangeEventDom) {
+    console.log(ev.detail.value);
+  },
 })

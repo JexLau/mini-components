@@ -5,6 +5,7 @@
     "wxc-divider": "/components/divider/index",
     "wxc-video": "/components/video/index",
     "wxc-input": "/components/input/index",
+    "wxc-select-picker": "/components/select-picker/index",
     "wxc-area-picker": "/components/area-picker/index",
     "wxc-date-picker": "/components/date-picker/index"
   }
