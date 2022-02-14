@@ -18,6 +18,10 @@ Page({
       { text: "面积", isActive: false, key: "size" },
       { text: "更多", isActive: false, key: "more" }
     ],
+    videoConfig: {
+      url: "https://apkj-static.apyfc.com/1610436547232155.mp4",
+      videoCover: "https://apkj-static.apyfc.com/1607510123699346.jpeg"
+    }
   },
   
   /** 监听Filter-item点击事件 */

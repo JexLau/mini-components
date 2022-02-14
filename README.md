@@ -11,10 +11,11 @@
 - DatePicker        时间选择器
 - Filter            条件筛选
 - Flod              文本的折叠展开
+- Divider                分割线
+- Video                  视频组件
 
 ## 待整理
 
-- Divider                分割线
 - Input                  输入框
 - Picker                 简单选择器
 - Tabs                   标签页
@@ -26,7 +27,6 @@
 - Throttle               节流按钮
 - ScrollView             滚动视图
 - OpenShare              对外分享
-- Video                  视频组件
 - Slider                 双向滑动条(原出处: https://github.com/weixianlove/zy-slider)
 - Uploader               上传照片
 - CanvasRing             画圆环

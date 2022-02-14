@@ -38,4 +38,10 @@
     <view>分割线组件样例</view>
     <wxc-divider marginTop="{{10}}" marginBottom="{{10}}"></wxc-divider>
   </view>
+  <view style="margin-bottom: 60rpx">
+    <view>Video组件样例</view>
+    <view style="width: 100%;height: 400rpx;">
+      <wxc-video config="{{videoConfig}}"></wxc-video>
+    </view>
+  </view>
 </view>
