@@ -16,11 +16,6 @@ Component({
     /** 筛选列表 */
     options: [] as Array<FilterOptionType>
   },
-  lifetimes: {
-    attached() {
-      console.log("filterOptions:", this.data.filterOptions);
-    }
-  },
   observers: {
     /** 监听父组件传递下来的filterOptions列表 */
     filterOptions(data) {

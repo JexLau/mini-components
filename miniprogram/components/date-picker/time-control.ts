@@ -1,5 +1,5 @@
 import { formatTime } from '../../utils/util'
-import { GetDateTime, ITimeControlExoprt } from './time-control.d'
+import { DateTimeValue, ITimeControlExoprt } from './time-control.d'
 
 /** 时间列表项 */
 interface IDateKey {
@@ -401,7 +401,7 @@ Component({
       }, 100)
     },
     /** 获取时间 */
-    getDate(): GetDateTime {
+    getDate(): DateTimeValue {
       const {
         _yearIndex, _monthIndex, _dayIndex, _hourIndex, _minuteIndex,
         yearLists, monthLists, dayLists, hourLists, minuteLists

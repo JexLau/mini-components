@@ -33,6 +33,7 @@ Component({
   methods: {
     /** 切换时间控件显示和隐藏 */
     hideOrShow() {
+      console.log("hideOrShow")
       this.setData({ isShow: !this.data.isShow })
       const data: StatusParams = { isShow: this.data.isShow }
       this.triggerEvent('status', data)
@@ -53,6 +54,10 @@ Component({
       this.hideOrShow()
       const data: DateTimeValue = this.data._mpTimeControl.getDate()
       this.triggerEvent('change', data)
+    },
+    /** 空函数 */
+    catchEmptyTap() {
+      return
     }
   }
 })

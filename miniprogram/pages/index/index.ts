@@ -3,11 +3,13 @@
 import { AreaPickerParams } from "../../components/area-picker/index.d";
 import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
+import { formatTime } from "../../utils/util";
 
 Page({
   data: {
     /** 开始时间 */
-    startDate: -1,
+    startDate: 1644825802862,
+    dateText: "",
     curActive: "",
     filterOptions: [
       { text: "区域", isActive: false, key: "area" },
@@ -35,6 +37,9 @@ Page({
   /** 监听时间发生变化 */
   changeDate(ev: Mini.Wx.CustomEventDom<DateTimeValue>) {
     console.log("时间:", ev.detail.rawDateTime);
+    this.setData({
+      dateText: formatTime(ev.detail.rawDateTime, "yyyy年MM月dd日 hh时mm分", false),
+    })
   },
 
   /** 时间选择器状态变化 */

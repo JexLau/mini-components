@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "wx-time-control": "./time-control"
+    "wxc-time-control": "./time-control"
   }
 }
