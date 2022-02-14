@@ -16,11 +16,11 @@
 - Input                  输入框
 - Picker                 简单选择器
 - Radio                  单选
+- GetPhone         获取用户手机号
 
 ## 待整理
 
 - Tabs                   标签页
-- GetPhoneNumber         获取用户手机号
 - GetUserProfile         获取用户信息
 - PreImageLoader         图片预加载
 - Poster                 海报

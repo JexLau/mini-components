@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "wxc-get-phone": "/components/get-phone/index",
     "wxc-filter": "/components/filter/index",
     "wxc-flod": "/components/flod/index",
     "wxc-divider": "/components/divider/index",

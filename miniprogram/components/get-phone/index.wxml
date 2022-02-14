@@ -1,0 +1,4 @@
+<!-- 组件: 获取用户手机号 -->
+<view wx:if="{{ userPhone === '' }}" class="wrap" catchtap="catchEmptyTap">
+  <button style="width: 100%; height: 100%;" class="btn" open-type="getPhoneNumber" bind:getphonenumber="getUserPhone"></button>
+</view>

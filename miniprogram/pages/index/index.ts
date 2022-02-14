@@ -45,6 +45,7 @@ Page({
         checked: true
       }
     ],
+    phoneNumber: ""
   },
 
   /** 监听Filter-item点击事件 */
@@ -88,4 +89,13 @@ Page({
   radioChange(ev: Mini.Wx.ChangeEventDom) {
     console.log(ev.detail.value);
   },
+
+  // 获取用户手机号
+  getPhone(ev: Mini.Wx.CustomEventDom<{phoneNumber: string}>) {
+    console.log(ev.detail.phoneNumber);
+    this.setData({
+      phoneNumber: ev.detail.phoneNumber
+    })
+    wx.showToast({ title: "登录成功", icon: "none", mask: true })
+  }
 })
