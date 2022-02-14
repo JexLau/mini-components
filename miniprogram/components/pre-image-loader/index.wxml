@@ -1,0 +1,2 @@
+<image wx:if='{{!finishLoadFlag}}' src='./assets/default_picture.png' class='image-class' />
+<image class='{{finishLoadFlag ? "image-class" : "before-load image-class"}}' src='{{originalImage}}' bindload='finishLoad' />

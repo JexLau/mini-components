@@ -7,22 +7,21 @@
 
 ## 已整理
 
-- AreaPicker        地址选择器
-- DatePicker        时间选择器
-- Filter            条件筛选
-- Flod              文本的折叠展开
+- AreaPicker             地址选择器
+- DatePicker             时间选择器
+- Filter                 条件筛选
+- Flod                   文本的折叠展开
 - Divider                分割线
 - Video                  视频组件
 - Input                  输入框
 - Picker                 简单选择器
 - Radio                  单选
-- GetPhone         获取用户手机号
+- GetPhone               获取用户手机号
+- PreImageLoader         图片预加载默认图片
 
 ## 待整理
 
 - Tabs                   标签页
-- GetUserProfile         获取用户信息
-- PreImageLoader         图片预加载
 - Poster                 海报
 - Throttle               节流按钮
 - ScrollView             滚动视图

@@ -1,6 +1,12 @@
 <!-- index.wxml -->
 <view>
   <view style="margin-bottom: 60rpx">
+    <view>图片预加载默认图片样例</view>
+    <view style="width: 235rpx; height: 165rpx;">
+      <wxc-image-loader originalImage="{{'https://apkj-static.apyfc.com/mp-share-img.png'}}"></wxc-image-loader>
+    </view>
+  </view>
+  <view style="margin-bottom: 60rpx">
     <view>条件filter组件样例</view>
     <wxc-filter filterOptions="{{ filterOptions }}" bind:handleClick="handleFilterItemClick">
       <view wx:if="{{curActive === 'area'}}">area1</view>
