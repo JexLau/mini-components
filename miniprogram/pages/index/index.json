@@ -2,6 +2,7 @@
   "usingComponents": {
     "wxc-filter": "/components/filter/index",
     "wxc-flod": "/components/flod/index",
+    "wxc-divider": "/components/divider/index",
     "wxc-area-picker": "/components/area-picker/index",
     "wxc-date-picker": "/components/date-picker/index"
   }

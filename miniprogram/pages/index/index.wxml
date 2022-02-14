@@ -26,12 +26,16 @@
     <view>时间选择组件样例</view>
     <view class="select-box">
       <view class="select-label">时间</view>
-       <view class="picker-wrap">
-          <view wx:if="{{ dateText }}">{{ dateText }}</view>
-          <view wx:else class="placeholder-color">请选择时间</view>
-        </view>
+      <view class="picker-wrap">
+        <view wx:if="{{ dateText }}">{{ dateText }}</view>
+        <view wx:else class="placeholder-color">请选择时间</view>
+      </view>
       <image class="right-icon" src="/assets/btn_icon_open.png"></image>
       <wxc-date-picker bind:change="changeDate" bind:status="pickerDateStatusChange" startDate="{{startDate}}"></wxc-date-picker>
     </view>
+  </view>
+  <view style="margin-bottom: 60rpx">
+    <view>分割线组件样例</view>
+    <wxc-divider marginTop="{{10}}" marginBottom="{{10}}"></wxc-divider>
   </view>
 </view>

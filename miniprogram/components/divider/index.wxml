@@ -1,0 +1,6 @@
+<!-- 分割线 -->
+<view class="divider line-color" style="margin-top: {{marginTop}}rpx; margin-bottom: {{marginBottom}}rpx;">
+  <view class="content {{ contentPosition === 'left' ? 'content-left' : (contentPosition === 'right' ? 'content-right' : '')}}" wx:if="{{content}}" style="background: {{background}};">
+    {{content}}
+  </view>
+</view>

@@ -1,0 +1,21 @@
+.divider {
+  position: relative;
+  height: 1px;
+  background: none;
+  box-shadow: 0 0.5px 0 #e1e1e1;
+}
+.content-left {
+  left: 20%;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 20rpx;
+  font-size: 22rpx;
+  color: #ccc;
+}
+.content-right {
+  left: 80%;
+}
