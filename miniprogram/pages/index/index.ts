@@ -3,6 +3,7 @@
 import { AreaPickerParams } from "../../components/area-picker/index.d";
 import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
+import { TabsConfig } from "../../components/tabs/index.d";
 import { formatTime } from "../../utils/util";
 
 const selectList: Array<{ value: number; text: string }> = []
@@ -45,7 +46,26 @@ Page({
         checked: true
       }
     ],
-    phoneNumber: ""
+    phoneNumber: "",
+    tabsConfig: {
+      /** tabs数据 */
+      tabs: [
+        {
+          text: "商业贷款",
+          key: "business"
+        },
+        {
+          text: "公积金贷款",
+          key: "provident"
+        },
+        {
+          text: "组合贷款",
+          key: "combination"
+        }
+      ],
+      /** 当前的tab */
+      defaultActive: "business"
+    } as TabsConfig,
   },
 
   /** 监听Filter-item点击事件 */
@@ -97,5 +117,16 @@ Page({
       phoneNumber: ev.detail.phoneNumber
     })
     wx.showToast({ title: "登录成功", icon: "none", mask: true })
-  }
+  },
+
+  /** tab change */
+  handleTabsChange(ev: Mini.Wx.TapEventDom<Record<string, never>, { value: string }>) {
+    const tab = ev.detail.value
+    this.setData({
+      tabsConfig: {
+        ...this.data.tabsConfig,
+        defaultActive: tab
+      },
+    })
+  },
 })

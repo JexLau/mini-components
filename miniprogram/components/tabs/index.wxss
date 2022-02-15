@@ -1,0 +1,77 @@
+/* tab选项卡 */
+.tab-wrap {
+  position: relative;
+  z-index: 9;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-wrap.full-height {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-around;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.horizontal-scroll {
+  height: 88rpx;
+  line-height: 88rpx;
+  /* margin-right: 14rpx; */
+  display: inline-block;
+  text-align: center;
+  padding: 0 25rpx;
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.tab-item_active {
+  color: #333;
+  font-weight: bold;
+}
+
+.tab-item_active .tab-border {
+  background: #c9342e;
+}
+
+.tab-border {
+  margin-top: 4rpx;
+  width: 30rpx;
+  height: 4rpx;
+  background: transparent;
+  border-radius: 2rpx;
+  position: absolute;
+  left: 50%;
+  bottom: 20rpx;
+  transform: translate(-50%, 0);
+}
+
+.tab-content {
+  overflow: scroll;
+}
+
+.tab-content.full-height {
+  height: 100%;
+}
+
+.tab-content-item {
+  display: none;
+}
+
+.tab-content-item.full-height {
+  height: 100%;
+}
+
+.tab-content_active {
+  display: block;
+}
+
+/* tab选项卡end */

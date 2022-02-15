@@ -74,4 +74,16 @@
       <wxc-get-phone bind:authSuccess="getPhone"></wxc-get-phone>
     </view>
   </view>
+  <view style="margin-bottom: 60rpx">
+    <view>tabs组件样例</view>
+    <wxc-tabs config="{{tabsConfig}}" bind:change="handleTabsChange">
+      <view slot="business" wx:if="{{tabsConfig.defaultActive === 'business'}}">
+        商业贷款
+      </view>
+      <view slot="provident" wx:if="{{tabsConfig.defaultActive === 'provident'}}">
+        公积金贷款
+      </view>
+      <view slot="combination" wx:if="{{tabsConfig.defaultActive === 'combination'}}">组合贷款</view>
+    </wxc-tabs>
+  </view>
 </view>

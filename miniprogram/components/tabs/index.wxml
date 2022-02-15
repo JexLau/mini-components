@@ -1,0 +1,35 @@
+<view class="tab-wrap {{config.isFull ? 'full-height' : ''}}">
+	<!-- tab 列表开始 -->
+	<scroll-view
+	 class="wrapper custom-wrapper"
+	 scroll-x="{{config.isScroll}}"
+	 scroll-into-view="{{config.defaultActive.toString()}}"
+	>
+		<view
+		 wx:for="{{config.tabs}}"
+		 wx:key="key"
+		 bind:tap="changeTab"
+		 data-key="{{item.key}}"
+		 id="{{item.key}}"
+		 hover-class="none"
+		 class="horizontal-scroll {{item.key === config.defaultActive ? 'tab-item_active custom-tab-item_active' : ''}}"
+		 style="min-width: {{ itemWidth }}rpx;"
+		>
+			<text>{{item.text}}</text>
+			<view class="tab-border custom-border"></view>
+		</view>
+	</scroll-view>
+	<!-- tab 列表结束 -->
+	<!-- tab 内容开始 -->
+	<view class="tab-content {{config.isFull ? 'full-height' : ''}}" style="padding-top:{{config.paddingTop}}">
+		<view
+		 wx:for="{{config.tabs}}"
+		 wx:key="key"
+		 class="tab-content-item {{item.key === config.defaultActive ? 'tab-content_active' : ''}} {{config.isFull ? 'full-height' : ''}}"
+		>
+			<slot name="{{item.key}}"></slot>
+		</view>
+	</view>
+	<!-- tab 内容结束 -->
+</view>
+

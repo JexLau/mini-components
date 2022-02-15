@@ -18,10 +18,10 @@
 - Radio                  单选
 - GetPhone               获取用户手机号
 - PreImageLoader         图片预加载默认图片
+- Tabs                   标签页
 
 ## 待整理
 
-- Tabs                   标签页
 - Poster                 海报
 - Throttle               节流按钮
 - ScrollView             滚动视图
