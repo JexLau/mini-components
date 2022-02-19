@@ -29,9 +29,6 @@
 - OpenShare              对外分享
 - Uploader               上传照片
 - CanvasRing             画圆环
-- Skeleto                骨架屏
-- MorgageCalculator      房贷计算器(优先级不高)
-
 
 ## 关于系统设计的总结
 

@@ -1,7 +1,5 @@
-/**index.wxss**/
 page {
   box-sizing: border-box;
-  // padding: 10rpx 20rpx;
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -56,7 +54,7 @@ page {
   color: #fff;
 }
 
-.search-room-price {
+.price {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
   font-size: 40rpx;

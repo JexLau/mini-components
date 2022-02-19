@@ -1,5 +1,3 @@
-// index.ts
-
 import { AreaPickerParams } from "../../components/area-picker/index.d";
 import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
@@ -67,7 +65,7 @@ Page({
       defaultActive: "business"
     } as TabsConfig,
     lowValue: 10,
-    heighValue: 800
+    heighValue: 800,
   },
 
   /** 监听Filter-item点击事件 */
@@ -112,7 +110,7 @@ Page({
     console.log(ev.detail.value);
   },
 
-  // 获取用户手机号
+  /** 获取用户手机号 */
   getPhone(ev: Mini.Wx.CustomEventDom<{ phoneNumber: string }>) {
     console.log(ev.detail.phoneNumber);
     this.setData({
