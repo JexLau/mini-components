@@ -66,6 +66,8 @@ Page({
       /** 当前的tab */
       defaultActive: "business"
     } as TabsConfig,
+    lowValue: 10,
+    heighValue: 800
   },
 
   /** 监听Filter-item点击事件 */
@@ -111,7 +113,7 @@ Page({
   },
 
   // 获取用户手机号
-  getPhone(ev: Mini.Wx.CustomEventDom<{phoneNumber: string}>) {
+  getPhone(ev: Mini.Wx.CustomEventDom<{ phoneNumber: string }>) {
     console.log(ev.detail.phoneNumber);
     this.setData({
       phoneNumber: ev.detail.phoneNumber
@@ -134,5 +136,19 @@ Page({
     wx.navigateTo({
       url: "/pages/scroll-view/index",
     })
-  }
+  },
+
+
+  /** 设置最小值 */
+  lowValueChange(ev: Mini.Wx.CustomEventDom<{ lowValue: number }>) {
+    this.setData({
+      lowValue: ev.detail.lowValue
+    })
+  },
+  /** 设置最大值 */
+  heighValueChange(ev: Mini.Wx.CustomEventDom<{ heighValue: number }>) {
+    this.setData({
+      heighValue: ev.detail.heighValue
+    })
+  },
 })

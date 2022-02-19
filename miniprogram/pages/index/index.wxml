@@ -84,8 +84,18 @@
   </view>
   <view style="margin-bottom: 60rpx">
     <view>滚动视图组件样例</view>
-    <view class="btn" bind:tap="scrollviewLink">点我跳转
-      <!-- <mp-prevent-shake bind:click="subData"></mp-prevent-shake> -->
+    <view class="btn" bind:tap="scrollviewLink">点我跳转</view>
+  </view>
+  <view style="margin-bottom: 60rpx">
+    <view>双向滑动条组件样例</view>
+    <view class="search-room-price theme-color-main_shop">
+      {{lowValue}}万-{{heighValue}}万
     </view>
+    <wxc-slider id="slider" minValue="10" maxValue="800" min="10" max="800" blockColor="#fff" selectedColor="#c9342e" bind:lowValueChange="lowValueChange" bind:heighValueChange="heighValueChange">
+      <view class="scope-price">
+        <text>10万</text>
+        <text>800万+</text>
+      </view>
+    </wxc-slider>
   </view>
 </view>

@@ -8,6 +8,7 @@
     "wxc-input": "/components/input/index",
     "wxc-radio": "/components/radio/index",
     "wxc-tabs": "/components/tabs/index",
+    "wxc-slider": "/components/slider/index",
     "wxc-image-loader": "/components/pre-image-loader/index",
     "wxc-select-picker": "/components/select-picker/index",
     "wxc-area-picker": "/components/area-picker/index",

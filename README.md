@@ -20,13 +20,13 @@
 - PreImageLoader         图片预加载默认图片
 - Tabs                   标签页
 - ScrollView             滚动视图
+- Slider                 双向滑动条(原出处: https://github.com/weixianlove/zy-slider)
 
 ## 待整理
 
 - Poster                 海报
 - Throttle               节流按钮
 - OpenShare              对外分享
-- Slider                 双向滑动条(原出处: https://github.com/weixianlove/zy-slider)
 - Uploader               上传照片
 - CanvasRing             画圆环
 - Skeleto                骨架屏
