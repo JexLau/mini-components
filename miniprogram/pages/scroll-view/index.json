@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滚动列表",
+  "usingComponents": {
+    "wxc-scroll-view": "/components/scroll-view/index"
+  }
+}

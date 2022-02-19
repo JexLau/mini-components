@@ -1,0 +1,67 @@
+/* 组件: 滚动组件 */
+.myscroll-view {
+  height: 100%;
+}
+
+.loading,
+.not-more-data {
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  color: #333;
+}
+
+.loading-icon {
+  margin-right: 14rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.wrap {
+  min-height: 101%;
+}
+
+.not-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.not-data-icon {
+  margin-top: 200rpx;
+  width: 251rpx;
+  height: 273rpx;
+}
+
+.nodaBox2 {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140rpx;
+}
+
+.not-data-slot:empty+.nodaBox2 {
+  display: flex;
+}
+
+.nodaImg {
+  width: 408rpx;
+  height: 264rpx;
+}
+
+.nodeText {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.boldText {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}

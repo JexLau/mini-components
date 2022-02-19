@@ -33,7 +33,6 @@ Component({
   methods: {
     /** 切换时间控件显示和隐藏 */
     hideOrShow() {
-      console.log("hideOrShow")
       this.setData({ isShow: !this.data.isShow })
       const data: StatusParams = { isShow: this.data.isShow }
       this.triggerEvent('status', data)

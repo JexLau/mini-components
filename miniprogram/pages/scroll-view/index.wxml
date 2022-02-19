@@ -1,0 +1,17 @@
+<view class="list-wrap">
+  <wxc-scroll-view class="list" id="scroll-list" :page-size="{{ formData.pageSize }}" bind:up="getList" bind:down="getList">
+    <view class="item" wx:for="{{ list }}" wx:key="index">
+      <view>
+        <view class="item-name">{{item.projectName}}</view>
+        <view class="item-region">{{item.area}}·{{item.street}}</view>
+      </view>
+      <view class="item-price">
+        <text wx:if="{{item.price}}">{{item.price}}元/m²</text>
+        <text wx:if="{{!item.price}}">暂无价格</text>
+      </view>
+    </view>
+    <view slot="nodata">
+      <text class="nodeText">暂未找到相关数据</text>
+    </view>
+  </wxc-scroll-view>
+</view>

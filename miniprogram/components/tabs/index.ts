@@ -18,7 +18,6 @@ Component({
         this.setData({
           itemWidth: 750 / this.data.config.tabs.length
         })
-        console.log(this.data.itemWidth)
       }
     }
   },

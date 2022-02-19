@@ -1,0 +1,23 @@
+<!-- 组件: 滚动组件 -->
+<scroll-view bindrefresherrefresh="refresh" refresher-enabled="{{ !disableRefresh && !loading }}" scroll-y scroll-into-view="{{ scrollIntoViewId }}" refresher-triggered="{{ refreshLoading }}" bindscrolltolower="load" class="myscroll-view">
+  <view class="wrap">
+    <view class="top-client"></view>
+    <!-- 自定义的没有数据 -->
+    <view class="not-data-slot">
+      <slot name="nodata" wx:if="{{ !refreshLoading && !loading && total === 0 }}"></slot>
+    </view>
+    <!-- 默认的没有数据 -->
+    <view class="nodaBox2" wx:if="{{ !refreshLoading && !loading && total === 0 }}">
+      <image src="./assets/label_icon_default.png" class="nodaImg" />
+      <text class="nodeText">{{ notDataText || '暂无数据~' }}</text>
+    </view>
+    <slot></slot>
+  </view>
+  <block wx:if="{{ !disableLoad }}">
+    <view wx:if="{{ !refreshLoading && isMoreData }}" class="loading">
+      <image class="loading-icon" src="./assets/loading.gif"></image>
+      加载更多中
+    </view>
+    <view wx:if="{{ isShowTip && (!isMoreData && total !== 0) }}" class="not-more-data">-- 我也是有底线的 --</view>
+  </block>
+</scroll-view>

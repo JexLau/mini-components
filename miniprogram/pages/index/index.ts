@@ -129,4 +129,10 @@ Page({
       },
     })
   },
+
+  scrollviewLink() {
+    wx.navigateTo({
+      url: "/pages/scroll-view/index",
+    })
+  }
 })

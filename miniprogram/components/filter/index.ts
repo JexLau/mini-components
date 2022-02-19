@@ -49,7 +49,6 @@ Component({
 
     /** 关闭筛选框 */
     close(ev: Mini.Wx.TapEventDom | boolean) {
-      console.log("close:", ev)
       if (ev) {
         this.cancel()
       }
