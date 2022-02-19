@@ -2,6 +2,7 @@ import { AreaPickerParams } from "../../components/area-picker/index.d";
 import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
 import { TabsConfig } from "../../components/tabs/index.d";
+import { CanvasRing } from "../../utils/canvasRing";
 import { formatTime } from "../../utils/util";
 
 const selectList: Array<{ value: number; text: string }> = []
@@ -66,6 +67,10 @@ Page({
     } as TabsConfig,
     lowValue: 10,
     heighValue: 800,
+  },
+
+  onLoad() {
+    this._canvas()
   },
 
   /** 监听Filter-item点击事件 */
@@ -136,17 +141,27 @@ Page({
     })
   },
 
-
   /** 设置最小值 */
   lowValueChange(ev: Mini.Wx.CustomEventDom<{ lowValue: number }>) {
     this.setData({
       lowValue: ev.detail.lowValue
     })
   },
+
   /** 设置最大值 */
   heighValueChange(ev: Mini.Wx.CustomEventDom<{ heighValue: number }>) {
     this.setData({
       heighValue: ev.detail.heighValue
     })
+  },
+
+  /** 绘制圆环 */
+  _canvas() {
+    const ring = new CanvasRing("canvas-ring", [
+      { id: "number1", value: 45, color: "#F9DD71" },
+      { id: "number2", value: 33, color: "#33C779" },
+      { id: "number3", value: 22, color: "#2D80DF" }
+    ])
+    ring.draw()
   },
 })

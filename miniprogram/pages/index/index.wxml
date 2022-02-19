@@ -100,4 +100,8 @@
       </view>
     </wxc-slider>
   </view>
+  <view>
+    <view>画圆环样例</view>
+    <canvas canvas-id="canvas-ring" id="canvas-ring" style="width: 260rpx; height: 260rpx"></canvas>
+  </view>
 </view>
