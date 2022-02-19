@@ -104,4 +104,12 @@
     <view>画圆环样例</view>
     <canvas canvas-id="canvas-ring" id="canvas-ring" style="width: 260rpx; height: 260rpx"></canvas>
   </view>
+  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
+  <view>
+    <view>节流按钮样例</view>
+    <view class="btn" style="position: relative;">
+      <wxc-throttle-btn bind:click="throttleNumberChange"></wxc-throttle-btn>
+      点我看看:{{throttleNumber}}
+    </view>
+  </view>
 </view>

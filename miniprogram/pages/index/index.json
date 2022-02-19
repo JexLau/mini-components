@@ -9,6 +9,7 @@
     "wxc-radio": "/components/radio/index",
     "wxc-tabs": "/components/tabs/index",
     "wxc-slider": "/components/slider/index",
+    "wxc-throttle-btn": "/components/throttle-btn/index",
     "wxc-image-loader": "/components/pre-image-loader/index",
     "wxc-select-picker": "/components/select-picker/index",
     "wxc-area-picker": "/components/area-picker/index",

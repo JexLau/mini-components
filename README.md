@@ -22,12 +22,10 @@
 - ScrollView             滚动视图
 - Slider                 双向滑动条(原出处: https://github.com/weixianlove/zy-slider)
 - CanvasRing             绘制圆环
+- Throttle               节流按钮
 
 ## 待整理
 
-- Poster                 海报
-- Throttle               节流按钮
-- OpenShare              对外分享
 - Uploader               上传照片
 
 ## 关于系统设计的总结

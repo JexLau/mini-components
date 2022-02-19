@@ -67,6 +67,7 @@ Page({
     } as TabsConfig,
     lowValue: 10,
     heighValue: 800,
+    throttleNumber: 0
   },
 
   onLoad() {
@@ -164,4 +165,10 @@ Page({
     ])
     ring.draw()
   },
+
+  throttleNumberChange() {
+    this.setData({
+      throttleNumber: this.data.throttleNumber + 1
+    })
+  }
 })

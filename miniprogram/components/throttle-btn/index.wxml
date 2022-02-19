@@ -1,0 +1,2 @@
+<!-- 组件: 事件节流，减少抖动 -->
+<view bind:tap="handleTap" class="shake"></view>
