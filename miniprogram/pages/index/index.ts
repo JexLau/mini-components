@@ -3,6 +3,7 @@ import { StatusParams } from "../../components/date-picker/index.d";
 import { DateTimeValue } from "../../components/date-picker/time-control.d";
 import { TabsConfig } from "../../components/tabs/index.d";
 import { CanvasRing } from "../../utils/canvasRing";
+import { QiNiuUpload } from "../../utils/upload";
 import { formatTime } from "../../utils/util";
 
 const selectList: Array<{ value: number; text: string }> = []
@@ -67,9 +68,10 @@ Page({
     } as TabsConfig,
     lowValue: 10,
     heighValue: 800,
-    throttleNumber: 0
+    throttleNumber: 0,
+    imageUrl: ""
   },
-
+  qiNiuUpload: new QiNiuUpload(1),
   onLoad() {
     this._canvas()
   },
@@ -170,5 +172,18 @@ Page({
     this.setData({
       throttleNumber: this.data.throttleNumber + 1
     })
+  },
+
+  async upload() {
+    // 上传图片
+    this.qiNiuUpload.clear()
+    await this.qiNiuUpload.chooseImage()
+    wx.showLoading({ title: "上传中...", mask: true })
+    const successImageLists = await this.qiNiuUpload.upload()
+    const successImageItem = successImageLists[0]
+    this.setData({
+      imageUrl: successImageItem.successPath || successImageItem.localPath
+    })
+    wx.hideLoading()
   }
 })

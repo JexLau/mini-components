@@ -112,4 +112,17 @@
       点我看看:{{throttleNumber}}
     </view>
   </view>
+  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
+  <view>
+    <view>上传照片样例</view>
+    <view bind:tap="upload" class="file-box">
+      <view class="image-box">
+        <image class="idcard" src="{{ imageUrl }}"></image>
+        <view class="shade {{ imageUrl ? 'shade_active' : '' }}">
+          <image class="camera-icon" src="/assets/btn_icon_upload.png"></image>
+        </view>
+      </view>
+      上传照片
+    </view>
+  </view>
 </view>
