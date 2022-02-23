@@ -1,0 +1,22 @@
+<!-- 登录组件 -->
+<view class="{{fullHeight ? 'full-height' : ''}}">
+  <slot></slot>
+  <!-- 登录弹窗 -->
+  <view class="mask" wx:if="{{isShowLogin}}" catchtouchmove="catchEvent"></view>
+  <view class="main" wx:if="{{isShowLogin}}">
+    <view class="content">
+      <image class="out-icon" src="/icons/btn_icon_out.svg" bind:tap="closeLogin"></image>
+      <view class="login-wrap">
+        <image class="logo-icon" src="/icons/logo.png"></image>
+        <text class="login-slogen">登录后更精彩</text>
+      </view>
+      <view class="login-btn-wrap login-btn_wx">
+        微信登录
+        <button style="width: 100%; height: 100%;" class="wx-btn" open-type="getPhoneNumber"
+          bind:getphonenumber="wxLogin"></button>
+      </view>
+      <view bind:tap="changeLoginMode" class="login-btn-wrap login-btn_tel">手机号码登录</view>
+    </view>
+  </view>
+  <!-- 登录弹窗end -->
+</view>
