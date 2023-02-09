@@ -16,7 +16,10 @@ page {
   font-size: 28rpx;
 }
 
-
+.box {
+  padding: 20rpx;
+  background-color: rgb(255, 165, 0);
+}
 
 .select-box {
   position: relative;
@@ -53,9 +56,9 @@ page {
 }
 
 .btn {
-  width: 690rpx;
+  width: 100%;
   height: 88rpx;
-  margin-left: 30rpx;
+  margin-top: 40rpx;
   border-radius: 10rpx;
   background: rosybrown;
   display: flex;
@@ -126,18 +129,36 @@ page {
   margin-top: -32rpx;
 }
 
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+.textarea {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
 }
 
-.box {
-  padding: 20rpx;
-  background-color: rgb(255, 165, 0);
-  width: 100%;
-  margin-bottom: 20rpx;
+.text-content {
+  line-height: 1.5;
+}
+
+.rich {
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  background-color: #e1e1e1;
+  padding: 10rpx 10rpx;
+}
+
+.tap {
+  display: inline-flex;
+  font-size: 24rpx;
+  margin: 10rpx;
+  background-color: #e1e1e1;
+  padding: 3rpx 5rpx;
+  border-radius: 4rpx;
+}
+
+.more {
+  background-color: aquamarine;
 }
 
 .adContainer {

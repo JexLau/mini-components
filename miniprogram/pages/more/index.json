@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "OpenChatAI",
+  "navigationBarTitleText": "ChatGPT场景",
   "usingComponents": {
     "wxc-get-phone": "/components/get-phone/index",
     "wxc-filter": "/components/filter/index",

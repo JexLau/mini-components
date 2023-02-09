@@ -1,9 +1,0 @@
-<!-- 组件: 省市区三级联动 -->
-<picker class="picker-wrap" mode="multiSelector" bindchange="sitePickerChange" bind:tap="handleClick" bindcolumnchange="siteColumnChange" bindcancel="cancelPicker" value="{{siteIndex}}" range="{{currentDivisionLists}}" range-key="text" disabled="{{disabled}}">
-  <view wx:if="{{ siteName.province }}" class="area-box">
-    <text class="text">{{ siteName.province }} - {{ siteName.city }} - {{ siteName.area }}</text>
-  </view>
-  <view wx:else class="not-data-picker">
-    <text class="text">选择区域</text>
-  </view>
-</picker>

@@ -1,9 +1,0 @@
-<view bind:tap="palyVideo" wx:if="{{ !isPalyVideo }}" class="video">
-  <image class="video-icon" src="/assets/btn_icon_off.svg" wx:if="{{isEndPalyVideo}}" style="width: {{config.size}}rpx;height: {{config.size}}rpx;"></image>
-  <image class="video-icon" src="/assets/btn_icon_play.svg" wx:else style="width: {{config.size}}rpx;height: {{config.size}}rpx;"></image>
-  <image class="video" src="{{ config.videoCover }}"></image>
-</view>
-<video wx:else autoplay="{{true}}" bindplay="palyVideo" bindended="endVideo"
-       play-btn-position="{{ isStartPalyVideo ? 'bottom' : 'center' }}"
-       class="video {{ config.isTop && isStartPalyVideo ? 'video_top' : '' }}"
-       src="{{ config.url }}"></video>

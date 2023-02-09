@@ -151,14 +151,5 @@ Page({
       path: "/pages/chat/index",
       imageUrl: "https://api.ichains.site/static/index.png",
     }
-  },
-
-  preview(event: any) {
-    console.log(event.currentTarget)
-    const currentUrl = event.currentTarget.dataset.src
-    wx.previewImage({
-      current: currentUrl, // 当前显示图片的http链接
-      urls: [currentUrl]// 需要预览的图片http链接列表
-    })
-  }
+  } 
 })

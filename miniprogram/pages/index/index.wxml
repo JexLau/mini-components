@@ -1,128 +1,24 @@
 <view>
-  <view>
-    <view>图片预加载默认图片样例</view>
-    <view style="width: 235rpx; height: 165rpx;">
-      <wxc-image-loader originalImage="{{'https://apkj-static.apyfc.com/mp-share-img.png'}}"></wxc-image-loader>
+  <view class="wrap">
+    <view class="box">
+      <view>ChatGPT 内测中</view>
+      <view>联系客服 JexLau</view>
+      <!-- <image src="https://api.ichains.site/static/c.png" data-src="https://api.ichains.site/static/c.png" mode="aspectFit" show-menu-by-longpress bindtap="preview" alt="" srcset="" style="width: 100%;" /> -->
+    </view>
+    <view class="box">
+      <view>也可以关注公众号</view>
+      <view>Claude GPT问答</view>
+      <!-- <image src="https://api.ichains.site/static/w.png" data-src="https://api.ichains.site/static/w.png" mode="aspectFit" show-menu-by-longpress bindtap="preview" alt="" srcset="" style="width: 100%;" /> -->
     </view>
   </view>
+  <view>获取注册教程，提供🇺🇸手机号解决绑码问题</view>
   <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>条件filter组件样例</view>
-    <wxc-filter filterOptions="{{ filterOptions }}" bind:handleClick="handleFilterItemClick">
-      <view wx:if="{{curActive === 'area'}}">area1</view>
-      <view wx:if="{{curActive === 'price'}}">price1</view>
-      <view wx:if="{{curActive === 'houseType'}}">houseType1</view>
-      <view wx:if="{{curActive === 'size'}}">size1</view>
-      <view wx:if="{{curActive === 'more'}}">more1</view>
-    </wxc-filter>
+  <view class="title">ChatGPT 介绍</view>
+  <view class="content">
+    ChatGPT 是一个由 OpenAI 开发的大型语言模型，它可以通过自然语言文本交互来理解和回答问题。它可以用来做各种不同的任务，例如社交媒体聊天机器人、虚拟助手、在线问答系统等。它的优势在于能够根据上下文进行更准确和自然的回答，并且不需要人类来训练或编程。
   </view>
-  <view>
-    <view>地址选择组件样例</view>
-    <view class="select-box">
-      <view class="select-label">地址</view>
-      <wxc-area-picker bind:change="areaPickerChange" class="select-input"></wxc-area-picker>
-      <image class="right-icon" src="/assets/btn_icon_open.png"></image>
-    </view>
-  </view>
-  <view>
-    <view>展开/收起样例</view>
-    <wxc-flod content="富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。富文本格式（Rich Text Format）即RTF格式，又称多文本格式，是由微软公司开发的跨平台文档格式。 大多数的文字处理软件都能读取和保存RTF文档。 富文本格式(RTF) 是一种方便于不同的设备、系统查看的文本和图形文档格式。"></wxc-flod>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>时间选择组件样例</view>
-    <view class="select-box">
-      <view class="select-label">时间</view>
-      <view class="picker-wrap">
-        <view wx:if="{{ dateText }}">{{ dateText }}</view>
-        <view wx:else class="placeholder-color">请选择时间</view>
-      </view>
-      <image class="right-icon" src="/assets/btn_icon_open.png"></image>
-      <wxc-date-picker bind:change="changeDate" bind:status="pickerDateStatusChange" startDate="{{startDate}}"></wxc-date-picker>
-    </view>
-  </view>
-  <view>
-    <view>Video组件样例</view>
-    <view style="width: 100%;height: 400rpx;">
-      <wxc-video config="{{videoConfig}}"></wxc-video>
-    </view>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>Input组件样例</view>
-    <wxc-input label="总价" value="{{inputText}}" placeholder="请输入" textRight bind:input="handleInput">
-      <text slot="right-unit">万</text>
-    </wxc-input>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>选择器组件样例</view>
-    <wxc-select-picker label="期数" selectList="{{selectList}}" bind:change="pickerChange" textRight>
-      <image class="right-icon" src="/assets/btn_icon_open.png" slot="right-unit"></image>
-    </wxc-select-picker>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>单选组件样例</view>
-    <wxc-radio label="计算方式" radios="{{radios}}" defaulActive="{{'room'}}" bind:change="radioChange"></wxc-radio>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>获取用户手机号样例</view>
-    <view style="font-size: 20rpx">做成组件的形式，可以用来包裹某些必须获取手机号的业务</view>
-    <view style="position: relative;">
-      <view class="btn">点我看看 {{phoneNumber}}</view>
-      <wxc-get-phone bind:authSuccess="getPhone"></wxc-get-phone>
-    </view>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>tabs组件样例</view>
-    <wxc-tabs config="{{tabsConfig}}" bind:change="handleTabsChange">
-      <view slot="business" wx:if="{{tabsConfig.defaultActive === 'business'}}">商业贷款</view>
-      <view slot="provident" wx:if="{{tabsConfig.defaultActive === 'provident'}}">公积金贷款</view>
-      <view slot="combination" wx:if="{{tabsConfig.defaultActive === 'combination'}}">组合贷款</view>
-    </wxc-tabs>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>滚动视图组件样例</view>
-    <view class="btn" bind:tap="scrollviewLink">点我跳转</view>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>双向滑动条组件样例</view>
-    <view class="price">{{lowValue}}万-{{heighValue}}万</view>
-    <wxc-slider id="slider" minValue="10" maxValue="800" min="10" max="800" blockColor="#fff" selectedColor="#c9342e" bind:lowValueChange="lowValueChange" bind:heighValueChange="heighValueChange">
-      <view class="scope-price">
-        <text>10万</text>
-        <text>800万+</text>
-      </view>
-    </wxc-slider>
-  </view>
-  <view>
-    <view>画圆环样例</view>
-    <canvas canvas-id="canvas-ring" id="canvas-ring" style="width: 260rpx; height: 260rpx"></canvas>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>节流按钮样例</view>
-    <view class="btn" style="position: relative;">
-      <wxc-throttle-btn bind:click="throttleNumberChange"></wxc-throttle-btn>
-      点我看看:{{throttleNumber}}
-    </view>
-  </view>
-  <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
-  <view>
-    <view>上传照片样例</view>
-    <view bind:tap="upload" class="file-box">
-      <view class="image-box">
-        <image class="idcard" src="{{ imageUrl }}"></image>
-        <view class="shade {{ imageUrl ? 'shade_active' : '' }}">
-          <image class="camera-icon" src="/assets/btn_icon_upload.png"></image>
-        </view>
-      </view>
-      上传照片
-    </view>
+  <!-- <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider> -->
+  <view class="adContainer">
+    <ad unit-id="adunit-f275899f2af9c5b3"></ad>
   </view>
 </view>

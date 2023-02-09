@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "ChatGPT智能问答",
+  "usingComponents": {
+    "wxc-throttle-btn": "/components/throttle-btn/index",
+    "wxc-get-phone": "/components/get-phone/index",
+    "wxc-input": "/components/input/index"
+  }
+}

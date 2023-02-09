@@ -15,4 +15,11 @@ App<IAppOption>({
       },
     })
   },
+  /** 兜底分享配置 */
+  shareConfig() {
+    return {
+      path: "/pages/index",
+      imageUrl: "https://apkj-static.apyfc.com/share-home.png"
+    }
+  },
 })

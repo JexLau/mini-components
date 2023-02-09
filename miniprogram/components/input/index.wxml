@@ -1,6 +1,6 @@
 <view>
   <view class="input-box">
-    <view class="input-label">
+    <view class="input-label" wx:if="{{label}}">
       <text class="input-required" wx:if="{{required}}">*</text>
       <text>{{label}}</text>
     </view>

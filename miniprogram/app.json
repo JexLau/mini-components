@@ -1,13 +1,39 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/scroll-view/index"
+    "pages/chat/index",
+    "pages/more/index"
   ],
+  "tabBar": {
+    "custom": false,
+    "color": "#999999",
+    "selectedColor": "#C9342E",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/chat/index",
+        "text": "提问",
+        "iconPath": "assets/theme/shop/tab_icon_home_default.png",
+        "selectedIconPath": "assets/theme/shop/tab_icon_home_pre.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "assets/theme/shop/tab_icon_my_default.png",
+        "selectedIconPath": "assets/theme/shop/tab_icon_my_pre.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 600000,
+    "downloadFile": 600000
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
