@@ -1,28 +1,35 @@
 <view>
   <view style="margin-bottom:30rpx;">国外访问，速度可能比较慢，请耐心等候...</view>
+  <view style="margin-bottom:30rpx;">高峰时期出错,多试几次就好了...</view>
   <view style="margin-bottom:30rpx;">{{canUse?"提问示例：以我永远爱你写一段情书":"正在初始化"}}</view>
   <view>
     <view class="tap" bind:tap="fillInput" data-c="以我永远爱你写一段情书">以我永远爱你写一段情书</view>
     <view class="tap" bind:tap="fillInput" data-c="情人节买礼物攻略">情人节买礼物攻略</view>
     <view class="tap" bind:tap="fillInput" data-c="美食制作配方生成">美食制作配方生成</view>
     <view class="tap" bind:tap="fillInput" data-c="生成餐馆点评意见">生成餐馆点评意见</view>
-    <view class="tap" bind:tap="fillInput" data-c="语言翻译">语言翻译</view>
+    <view class="tap" bind:tap="fillInput" data-c="征求穿搭建议">征求穿搭建议</view>
     <view class="tap more" bind:tap="more">点击查看更多</view>
   </view>
   <textarea maxlength="9999" value="{{inputText}}" class="textarea" laceholder="请输入" bindinput="handleInput"></textarea>
-  <view class="btn" style="position: relative;" wx:if="{{canUse}}">
+  <view class="btn" style="position: relative;" wx:if="{{canUse && i > 0}}">
       <!-- <wxc-get-phone bind:authSuccess="getPhone"></wxc-get-phone> -->
-    <wxc-throttle-btn bind:click="submit"></wxc-throttle-btn> {{chating ? '正在等待回答...' : '🏮 提问'}}
+    <wxc-throttle-btn bind:click="submit"></wxc-throttle-btn> {{chating ? '正在等待回答...' : '🏮 提问剩余次数: ' + i}}
   </view>
-  <view style="margin-top:30rpx;">🪬 回答(答案可复制)</view>
+  <view class="btn" style="position: relative;" wx:if="{{canUse && i <= 0}}">
+    <wxc-throttle-btn bind:click="showAd"></wxc-throttle-btn> 看1次广告解锁5次
+  </view>
+  <view style="margin-top:30rpx;display: flex;align-items: center;justify-content:space-between;">
+    <view>🪬 回答(答案可复制)</view>
+    <view class="btn btn-sm" bind:tap="copy">复制</view>
+  </view>
   <view class="rich">
     <!-- <rich-text class="text-content" nodes="{{answer}}" wx:if="{{answer}}"></rich-text> -->
     <view class="textarea" wx:if="{{answer}}">{{answer}}</view>
   </view>
-  <view class="btn" style="position: relative;">
+  <!-- <view class="btn" style="position: relative;">
     <wxc-throttle-btn bind:click="copy"></wxc-throttle-btn>
     复制
-  </view>
+  </view> -->
   <view class="adContainer">
     <ad unit-id="adunit-f275899f2af9c5b3"></ad>
   </view>

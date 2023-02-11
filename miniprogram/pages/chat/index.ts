@@ -1,5 +1,6 @@
 import { ChatGetStart, ChatInit, ChatStart } from "../../services/example";
-
+let rewardedVideoAd: any = null
+const max = 5;
 Page({
   data: {
     canUse: false,
@@ -8,6 +9,7 @@ Page({
     pId: "",
     answer: "",
     inputText: "",
+    i: max,
     // -----------
     phoneNumber: "",
     lowValue: 10,
@@ -16,6 +18,34 @@ Page({
     imageUrl: ""
   },
   onLoad() {
+    if (wx.createRewardedVideoAd) {
+      rewardedVideoAd = wx.createRewardedVideoAd({ adUnitId: 'adunit-4c2747a524d53ef0' })
+      rewardedVideoAd.onLoad(() => {
+        console.log('onLoad event emit')
+      })
+      rewardedVideoAd.onError((err: any) => {
+        console.log('onError event emit', err)
+      })
+      rewardedVideoAd.onClose((res:any) => {
+        // 用户点击了【关闭广告】按钮
+        if (res && res.isEnded) {
+          // 正常播放结束，可以下发游戏奖励
+          wx.setStorageSync("i", max)
+          this.setData({
+            i: max
+          })
+        } else {
+          // 播放中途退出，不下发游戏奖励
+          wx.setStorageSync("i", 0)
+          this.setData({
+            i: 0
+          })
+        }
+      })
+
+    }
+    const _i = wx.getStorageSync("i") || this.data.i;
+    this.setData({ i: _i, })
     this.init()
   },
 
@@ -67,21 +97,34 @@ Page({
     const res = await ChatStart({ qu: this.data.inputText, c: this.data.cId, p: this.data.pId })
     // const res = await ChatGetStart({ q: this.data.inputText, cId: this.data.cId, pId: this.data.pId })
     if (res.code === 200) {
-      console.log(res)
+      // console.log(res)
+      const _i = this.data.i;
       this.setData({
         chating: false,
         cId: res.data.cId,
         pId: res.data.pId,
         answer: res.data.answer,
+        i: _i - 1
       })
       wx.setStorageSync("answer", res.data.answer)
+      wx.setStorageSync("i", _i - 1)
     } else {
       this.setData({
-        chating: true,
-        cId: res.data.cId,
-        pId: res.data.pId,
+        chating: false,
+        cId: "",
+        pId: "",
       })
     }
+  },
+
+  async showAd() {
+    rewardedVideoAd.show().catch(() => {
+      // 失败重试
+      rewardedVideoAd.load().then(() => rewardedVideoAd.show())
+        .catch((err: any) => {
+          wx.showModal({ title: "提示", content: "激励视频广告显示失败", })
+        })
+    })
   },
 
   async init() {

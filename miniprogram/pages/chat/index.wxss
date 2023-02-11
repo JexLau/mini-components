@@ -68,6 +68,12 @@ page {
   color: #fff;
 }
 
+.btn-sm {
+  width: 200rpx;
+  height: 88rpx;
+  margin-top: 0;
+}
+
 .price {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
