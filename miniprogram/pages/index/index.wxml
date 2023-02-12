@@ -5,11 +5,11 @@
       <view>联系客服 JexLau</view>
       <!-- <image src="https://api.ichains.site/static/c.png" data-src="https://api.ichains.site/static/c.png" mode="aspectFit" show-menu-by-longpress bindtap="preview" alt="" srcset="" style="width: 100%;" /> -->
     </view>
-    <view class="box">
+    <!-- <view class="box">
       <view>也可以关注公众号</view>
       <view>Claude GPT问答</view>
-      <!-- <image src="https://api.ichains.site/static/w.png" data-src="https://api.ichains.site/static/w.png" mode="aspectFit" show-menu-by-longpress bindtap="preview" alt="" srcset="" style="width: 100%;" /> -->
-    </view>
+      <image src="https://api.ichains.site/static/w.png" data-src="https://api.ichains.site/static/w.png" mode="aspectFit" show-menu-by-longpress bindtap="preview" alt="" srcset="" style="width: 100%;" />
+    </view> -->
   </view>
   <view>获取注册教程，提供🇺🇸手机号解决绑码问题</view>
   <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider>
@@ -19,6 +19,7 @@
   </view>
   <!-- <wxc-divider marginTop="{{40}}" marginBottom="{{40}}"></wxc-divider> -->
   <view class="adContainer">
-    <ad unit-id="adunit-f275899f2af9c5b3"></ad>
+    <!-- <ad unit-id="adunit-f275899f2af9c5b3"></ad> -->
+    <ad unit-id="adunit-28d63c8467e0f28a" ad-type="video" ad-theme="white"></ad>
   </view>
 </view>
