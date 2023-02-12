@@ -94,8 +94,9 @@ Page({
     this.setData({
       chating: true,
     })
-    const res = await ChatStart({ qu: this.data.inputText, c: this.data.cId, p: this.data.pId })
-    // const res = await ChatGetStart({ q: this.data.inputText, cId: this.data.cId, pId: this.data.pId })
+    const openid = wx.getStorageSync("openid");
+    // const res = await ChatGetStart({ q: this.data.inputText, cId: this.data.cId, pId: this.data.pId, openid, })
+    const res = await ChatStart({ qu: this.data.inputText, c: this.data.cId, p: this.data.pId, openid })
     if (res.code === 200) {
       // console.log(res)
       const _i = this.data.i;

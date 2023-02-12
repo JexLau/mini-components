@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ChatGetStart = exports.ChatStart = exports.ChatInit = void 0;
+exports.WxGetOpenId = exports.ChatGetStart = exports.ChatStart = exports.ChatInit = void 0;
 const request_1 = require("./request");
 function ChatInit(data) {
     return (0, request_1.Request)({
@@ -29,3 +29,12 @@ function ChatGetStart(data) {
     });
 }
 exports.ChatGetStart = ChatGetStart;
+function WxGetOpenId(data) {
+    return (0, request_1.Request)({
+        url: `/api/wxopenid`,
+        method: 'GET',
+        data,
+        notAuth: true,
+    });
+}
+exports.WxGetOpenId = WxGetOpenId;

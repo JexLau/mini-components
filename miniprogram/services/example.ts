@@ -27,3 +27,12 @@ export function ChatGetStart(data: any) {
         notAuth: true,
     })
 }
+
+export function WxGetOpenId(data: any) {
+    return Request<any>({
+        url: `/api/wxopenid`,
+        method: 'GET',
+        data,
+        notAuth: true,
+    })
+}

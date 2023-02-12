@@ -1,3 +1,5 @@
+import { WxGetOpenId } from "./services/example"
+
 // app.ts
 App<IAppOption>({
   globalData: {},
@@ -11,6 +13,9 @@ App<IAppOption>({
     wx.login({
       success: res => {
         console.log(res.code)
+        WxGetOpenId({code: res.code}).then((result: any) => {
+          wx.setStorageSync('openid', result.data.openid)
+        })
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       },
     })
