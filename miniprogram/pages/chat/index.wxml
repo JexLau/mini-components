@@ -9,27 +9,22 @@
     <view class="tap more" bind:tap="more">点击查看更多</view>
   </view>
   <textarea maxlength="9999" value="{{inputText}}" class="textarea" laceholder="请输入" bindinput="handleInput"></textarea>
-  <view class="btn" style="position: relative;" wx:if="{{canUse && i > 0}}">
-      <!-- <wxc-get-phone bind:authSuccess="getPhone"></wxc-get-phone> -->
-    <wxc-throttle-btn bind:click="submit"></wxc-throttle-btn> {{chating ? '正在等待回答...' : '🏮 提问剩余次数: ' + i}}
-  </view>
-  <view class="btn" style="position: relative;" wx:if="{{canUse && i <= 0}}">
+  <wxc-ad class="btn" wx:if="{{canUse}}" waiting="{{chating}}" bind:submitEvent="submit"></wxc-ad>
+  <!-- <view class="btn" style="position: relative;" wx:if="{{canUse && i > 0}}">
+    <wxc-throttle-btn bind:click="submit"></wxc-throttle-btn> {{chating ? '正在等待回答...' : '🏮 提问剩余次数: ' + adCount}}
+  </view> -->
+  <!-- <view class="btn" style="position: relative;" wx:if="{{canUse && i <= 0}}">
     <wxc-throttle-btn bind:click="showAd"></wxc-throttle-btn> 看1次广告解锁5次
-  </view>
-  <view style="margin-top:10rpx;">国外访问，速度可能比较慢，请耐心等候...高峰时期出错,多试几次就好了(也支持连续对话)</view>
+  </view> -->
+  <view style="margin-top:10rpx;">国外访问，速度可能比较慢，请耐心等候...高峰时期出错,多试几次就好了</view>
   <view style="margin-top:30rpx;display: flex;align-items: center;justify-content:space-between;">
-    <view>🪬 回答(答案可复制)</view>
+    <view>🪬 回答(支持连续对话)</view>
     <view class="btn btn-sm" bind:tap="copy">复制</view>
   </view>
   <view class="rich">
-    <!-- <rich-text class="text-content" nodes="{{answer}}" wx:if="{{answer}}"></rich-text> -->
     <view class="textarea" wx:if="{{answer}}">{{answer}}</view>
   </view>
-  <!-- <view class="btn" style="position: relative;">
-    <wxc-throttle-btn bind:click="copy"></wxc-throttle-btn>
-    复制
-  </view> -->
-  <view class="adContainer">
+  <view class="adContainer" wx:if="{{MiniProgramConfig.ad}}">
     <ad unit-id="adunit-f275899f2af9c5b3"></ad>
   </view>
 </view>

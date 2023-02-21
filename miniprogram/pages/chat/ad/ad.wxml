@@ -1,0 +1,10 @@
+<view style="position: relative;">
+  <block wx:if="{{adCount <= 0}}">
+    <wxc-throttle-btn bind:click="showAd"></wxc-throttle-btn>
+    看1次广告解锁{{max}}次
+  </block>
+  <block wx:if="{{adCount > 0}}">
+    <wxc-throttle-btn bind:click="submit"></wxc-throttle-btn>
+    {{isWaiting ? '🙉 正在等待回答...' : '🏮 提问剩余次数: ' + adCount}}
+  </block>
+</view>

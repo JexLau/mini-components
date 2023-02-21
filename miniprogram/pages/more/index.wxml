@@ -1,32 +1,3 @@
 <view>
-  <view class="fs-40">ChatGPT场景和使用</view>
-  <view class="bold">职业相关</view>
-  <view>1、生成面试问题帮助面试者准备面试;</view>
-  <view>2、创作一个短故事;</view>
-  <view>3、对各种问题进行头脑风暴，比如创业者项目，或者公司新项目开展;</view>
-  <view>4、帮助产品取名;</view>
-  <view>5、产品广告设计;</view>
-  <view class="bold">日常生活相关</view>
-  <view>1、对基本的问题进行问答;</view>
-  <view>2、对文字做摘要说明，比如会议纪要和书本;</view>
-  <view>3、好友聊天模拟;</view>
-  <view>4、语言语法纠正;</view>
-  <view>5、语言翻译;</view>
-  <view>6、文字生成颜色;</view>
-  <view>7、美食制作配方生成;</view>
-  <view>8、生成点评意见，比如餐馆点评;</view>
-  <view>9.段落关键字提取;</view>
-  <view class="bold">代码相关</view>
-  <view>1、程序语言转换，比如Python转Java。目前支持语言包括Python, Java,Go Node.js,R，C++等:</view>
-  <view>2、生成程序命令;(能极大的加快代码开发)</view>
-  <view>3、修复代码Bug;</view>
-  <view>4、SQL语句生成;</view>
-  <view>5、自然语言转换为Stripe API;</view>
-  <view>6、程序代码解释;</view>
-  <view>7、进行程序代码的压缩精简;</view>
-  <view>8、程序时间复杂度计算;</view>
-  <view>9、生成程序文档;</view>
-  <view>10、生成调用OpenAI API的代码;</view>
-  <view>11、无结构化数据中生成表格;</view>
-  <view>12、教机器学习语言模型进行机器学习;</view>
+  
 </view>

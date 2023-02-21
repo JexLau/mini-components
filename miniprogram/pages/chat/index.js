@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("../../config/index");
 const example_1 = require("../../services/example");
 let rewardedVideoAd = null;
 const max = 5;
@@ -11,16 +12,18 @@ Page({
         pId: "",
         answer: "",
         inputText: "",
-        i: max,
+        // 看广告次数
+        adCount: max,
         // -----------
         phoneNumber: "",
         lowValue: 10,
         heighValue: 800,
         throttleNumber: 0,
-        imageUrl: ""
+        imageUrl: "",
+        MiniProgramConfig: index_1.MiniProgramConfig,
     },
     onLoad() {
-        if (wx.createRewardedVideoAd) {
+        if (index_1.MiniProgramConfig.ad && wx.createRewardedVideoAd) {
             rewardedVideoAd = wx.createRewardedVideoAd({ adUnitId: 'adunit-4c2747a524d53ef0' });
             rewardedVideoAd.onLoad(() => {
                 console.log('onLoad event emit');
@@ -32,22 +35,22 @@ Page({
                 // 用户点击了【关闭广告】按钮
                 if (res && res.isEnded) {
                     // 正常播放结束，可以下发游戏奖励
-                    wx.setStorageSync("i", max);
+                    wx.setStorageSync("adCount", max);
                     this.setData({
-                        i: max
+                        adCount: max
                     });
                 }
                 else {
                     // 播放中途退出，不下发游戏奖励
-                    wx.setStorageSync("i", 0);
+                    wx.setStorageSync("adCount", 0);
                     this.setData({
-                        i: 0
+                        adCount: 0
                     });
                 }
             });
         }
-        const _i = wx.getStorageSync("i") || this.data.i;
-        this.setData({ i: _i, });
+        const _i = wx.getStorageSync("adCount") || this.data.adCount;
+        this.setData({ adCount: _i, });
         this.init();
     },
     /** 监听输入框输入 */
@@ -92,19 +95,19 @@ Page({
         });
         const openid = wx.getStorageSync("openid");
         // const res = await ChatGetStart({ q: this.data.inputText, cId: this.data.cId, pId: this.data.pId, openid, })
-        const res = await (0, example_1.ChatStart)({ qu: this.data.inputText, c: this.data.cId, p: this.data.pId, openid });
+        const res = await (0, example_1.ChatGetStart)({ qu: this.data.inputText, c: this.data.cId, p: this.data.pId, openid });
         if (res.code === 200) {
             // console.log(res)
-            const _i = this.data.i;
+            const _i = this.data.adCount;
             this.setData({
                 chating: false,
                 cId: res.data.cId,
                 pId: res.data.pId,
                 answer: res.data.answer,
-                i: _i - 1
+                adCount: _i - 1
             });
             wx.setStorageSync("answer", res.data.answer);
-            wx.setStorageSync("i", _i - 1);
+            wx.setStorageSync("adCount", _i - 1);
         }
         else {
             this.setData({

@@ -1,0 +1,5 @@
+page {
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: env(safe-area-inset-bottom);
+}
